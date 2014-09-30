@@ -196,7 +196,7 @@
 					<version>0.10</version>
 					<executions>
 						<execution>
-							<id>site</id>
+							<id>default-site-deploy</id>
 							<phase>site-deploy</phase>
 							<goals>
 								<goal>site</goal>
