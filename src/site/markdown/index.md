@@ -1,4 +1,5 @@
-# OSS Parent
+OSS Parent
+-----------
 
 A Maven pom project to store some commonly used configuration, especially that related to deployment to Sonatype's Nexus
 
