@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.genthaler</groupId>
 	<artifactId>oss-parent</artifactId>
@@ -309,22 +310,17 @@
 					<version>3.3</version>
 					<executions>
 						<execution>
-							<id>mojo-descriptor</id>
 							<goals>
 								<goal>descriptor</goal>
-							</goals>
-						</execution>
-						<!-- if you want to generate help goal -->
-						<execution>
-							<id>help-goal</id>
-							<goals>
 								<goal>helpmojo</goal>
 							</goals>
-							<configuration>
-								<helpPackageName>com.github.genthaler.help</helpPackageName>
-							</configuration>
 						</execution>
 					</executions>
+					<configuration>
+						<helpPackageName>com.github.genthaler.help</helpPackageName>
+						<!-- see http://jira.codehaus.org/browse/MNG-5346 -->
+						<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -434,6 +430,10 @@
 			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
