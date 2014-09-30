@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.genthaler</groupId>
 	<artifactId>oss-parent</artifactId>
-	<version>3</version>
+	<version>4-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>OSS Parent</name>
 	<description>Placeholder for commonly used settings</description>
@@ -37,7 +37,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/genthaler/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:https://github.com/genthaler/${project.artifactId}.git</developerConnection>
-		<tag>oss-parent-3</tag>
+		<tag>HEAD</tag>
 		<url>https://github.com/genthaler/${project.artifactId}</url>
 	</scm>
 	<issueManagement>
