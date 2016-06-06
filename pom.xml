@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.genthaler</groupId>
 	<artifactId>oss-parent</artifactId>
-	<version>5-SNAPSHOT</version>
+	<version>6-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>OSS Parent</name>
 	<description>Placeholder for commonly used settings</description>
