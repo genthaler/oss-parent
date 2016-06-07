@@ -187,13 +187,8 @@
 				</plugin>
 				<plugin>
 					<groupId>com.github.github</groupId>
-					<artifactId>downloads-maven-plugin</artifactId>
-					<version>0.6</version>
-				</plugin>
-				<plugin>
-					<groupId>com.github.github</groupId>
 					<artifactId>site-maven-plugin</artifactId>
-					<version>0.10</version>
+					<version>0.12</version>
 					<executions>
 						<execution>
 							<id>default-site-deploy</id>
@@ -339,7 +334,7 @@
 					<configuration>
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<useReleaseProfile>false</useReleaseProfile>
-						<releaseProfiles>sonatype-oss-release,github</releaseProfiles>
+						<releaseProfiles>sonatype-oss-release</releaseProfiles>
 						<goals>deploy site-deploy</goals>
 					</configuration>
 				</plugin>
@@ -681,85 +676,6 @@
 					<id>ossrh</id>
 					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 				</snapshotRepository>
-			</distributionManagement>
-		</profile>
-		<profile>
-			<id>github</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>com.github.github</groupId>
-						<artifactId>site-maven-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>repo</id>
-								<phase>deploy</phase>
-								<goals>
-									<goal>site</goal>
-								</goals>
-								<configuration>
-									<message>Maven artifacts for ${project.version}</message>
-									<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-									<branch>refs/heads/mvn-repo</branch>
-									<merge>true</merge>
-									<server>github</server>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-deploy-plugin</artifactId>
-						<configuration>
-							<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
-						</configuration>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-javadoc-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>attach-javadocs</id>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-site-plugin</artifactId>
-					</plugin>
-					<plugin>
-						<artifactId>maven-source-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>attach-sources</id>
-								<goals>
-									<goal>jar-no-fork</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-			<distributionManagement>
-				<repository>
-					<id>github</id>
-					<name>GitHub ${project.artifactId} Repository</name>
-					<url>https://raw.github.com/genthaler/${project.artifactId}/mvn-repo</url>
-				</repository>
-				<snapshotRepository>
-					<id>github</id>
-					<name>GitHub ${project.artifactId} Repository</name>
-					<url>https://raw.github.com/genthaler/${project.artifactId}/mvn-repo</url>
-				</snapshotRepository>
-				<site>
-					<id>github</id>
-					<name>GitHub</name>
-					<url>http://genthaler.github.io/${project.artifactId}/</url>
-				</site>
-				<downloadUrl>https://raw.github.com/genthaler/${project.artifactId}/mvn-repo/com/github/genthaler/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.jar</downloadUrl>
 			</distributionManagement>
 		</profile>
 		<profile>
