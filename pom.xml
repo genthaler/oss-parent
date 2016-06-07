@@ -340,7 +340,7 @@
 					<configuration>
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<useReleaseProfile>false</useReleaseProfile>
-						<releaseProfiles>sonatype-oss-release</releaseProfiles>
+						<releaseProfiles>sonatype-oss-release,github</releaseProfiles>
 						<goals>deploy site-deploy</goals>
 					</configuration>
 				</plugin>
