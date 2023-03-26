@@ -4,3 +4,5 @@
 /.classpath
 /pom.xml.*
 /release.properties
+/.java-version
+/oss-parent.iml
