@@ -59,7 +59,7 @@
 	</ciManagement>
 	<properties>
 		<ant.version>1.9.1</ant.version>
-		<cucumber.version>1.1.8</cucumber.version>
+		<cucumber.version>1.2.5</cucumber.version>
 		<github.global.server>github</github.global.server>
 		<localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
 		<maven-invoker-plugin.version>1.8</maven-invoker-plugin.version>
