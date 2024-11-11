@@ -71,7 +71,7 @@
 			<dependency>
 				<groupId>com.rubiconproject.oss</groupId>
 				<artifactId>jchronic</artifactId>
-				<version>0.2.6</version>
+				<version>0.2.8</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-io</groupId>
