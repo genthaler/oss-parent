@@ -220,7 +220,7 @@
 				<plugin>
 					<groupId>net.masterthought</groupId>
 					<artifactId>maven-cucumber-reporting</artifactId>
-					<version>0.0.6</version>
+					<version>5.8.2</version>
 					<executions>
 						<execution>
 							<id>default-post-integration-test</id>
