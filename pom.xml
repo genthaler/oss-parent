@@ -59,11 +59,11 @@
 	</ciManagement>
 	<properties>
 		<ant.version>1.9.1</ant.version>
-		<cucumber.version>1.1.8</cucumber.version>
+		<cucumber.version>1.2.5</cucumber.version>
 		<github.global.server>github</github.global.server>
 		<localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
 		<maven-invoker-plugin.version>1.8</maven-invoker-plugin.version>
-		<mavenVersion>3.0.5</mavenVersion>
+		<mavenVersion>3.9.9</mavenVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.version>1.9.0-Beta</kotlin.version>
     </properties>
@@ -72,12 +72,12 @@
 			<dependency>
 				<groupId>com.rubiconproject.oss</groupId>
 				<artifactId>jchronic</artifactId>
-				<version>0.2.6</version>
+				<version>0.2.8</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
-				<version>2.11.0</version>
+				<version>2.14.0</version>
 			</dependency>
 			<dependency>
 				<groupId>info.cukes</groupId>
@@ -157,12 +157,12 @@
 			<dependency>
 				<groupId>org.codehaus.plexus</groupId>
 				<artifactId>plexus-component-annotations</artifactId>
-				<version>1.5.5</version>
+				<version>2.2.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.codehaus.plexus</groupId>
 				<artifactId>plexus-utils</artifactId>
-				<version>3.0.18</version>
+				<version>3.0.24</version>
 			</dependency>
 			<dependency>
 				<groupId>org.hamcrest</groupId>
@@ -220,7 +220,7 @@
 				<plugin>
 					<groupId>com.google.code.sortpom</groupId>
 					<artifactId>maven-sortpom-plugin</artifactId>
-					<version>2.3.0</version>
+					<version>2.3.1</version>
 					<configuration>
 						<nrOfIndentSpace>-1</nrOfIndentSpace>
 						<sortProperties>true</sortProperties>
@@ -267,7 +267,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-failsafe-plugin</artifactId>
-					<version>2.17</version>
+					<version>3.1.2</version>
 					<executions>
 						<execution>
 							<goals>
@@ -321,7 +321,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>2.10</version>
+					<version>3.11.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -370,7 +370,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>2.2.1</version>
+					<version>3.3.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -385,7 +385,7 @@
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>animal-sniffer-maven-plugin</artifactId>
-					<version>1.9</version>
+					<version>1.23</version>
 					<executions>
 						<execution>
 							<goals>
@@ -544,7 +544,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.10</version>
+				<version>3.11.1</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
