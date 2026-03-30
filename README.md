@@ -4,7 +4,7 @@ A Maven pom project to store some commonly used configuration, especially for pu
 
 Some of the configuration will be inherited by including this project as a parent, some will need to be copied.
 
-Please see the [Project Page](http://genthaler.github.io/oss-parent).
+Please see the [Project Page](https://genthaler.github.io/oss-parent).
 
 There's also the [Issues](https://github.com/genthaler/oss-parent/issues) page.
 

@@ -7,12 +7,12 @@
 	<packaging>pom</packaging>
 	<name>OSS Parent</name>
 	<description>Placeholder for commonly used settings</description>
-	<url>http://genthaler.github.io/${project.artifactId}/</url>
+	<url>https://genthaler.github.io/${project.artifactId}/</url>
 	<inceptionYear>2014</inceptionYear>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
@@ -21,13 +21,13 @@
 			<id>genthaler</id>
 			<name>Günther Enthaler</name>
 			<email>genthaler@github.com</email>
-			<url>http://genthaler.github.io</url>
+			<url>https://genthaler.github.io</url>
 			<roles>
 				<role>Java Developer</role>
 			</roles>
 			<timezone>+10</timezone>
 			<properties>
-				<picUrl>http://www.gravatar.com/avatar/2a38f078b2ac0a89de09be4d5807fedb.png</picUrl>
+				<picUrl>https://www.gravatar.com/avatar/2a38f078b2ac0a89de09be4d5807fedb.png</picUrl>
 			</properties>
 		</developer>
 	</developers>
@@ -44,19 +44,6 @@
 		<system>GitHub</system>
 		<url>https://github.com/genthaler/${project.artifactId}/issues</url>
 	</issueManagement>
-	<ciManagement>
-		<system>Travis CI</system>
-		<url>https://travis-ci.org/genthaler/${project.artifactId}</url>
-		<notifiers>
-			<notifier>
-				<type>mail</type>
-				<sendOnError>true</sendOnError>
-				<sendOnFailure>true</sendOnFailure>
-				<sendOnSuccess>true</sendOnSuccess>
-				<sendOnWarning>true</sendOnWarning>
-			</notifier>
-		</notifiers>
-	</ciManagement>
 	<properties>
 		<ant.version>1.9.1</ant.version>
 		<cucumber.version>1.2.5</cucumber.version>
@@ -65,8 +52,7 @@
 		<maven-invoker-plugin.version>1.8</maven-invoker-plugin.version>
 		<mavenVersion>3.9.9</mavenVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kotlin.version>1.9.0-Beta</kotlin.version>
-    </properties>
+	</properties>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -171,20 +157,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib-jdk8</artifactId>
-            <version>${kotlin.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test</artifactId>
-            <version>${kotlin.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-    <build>
+	<build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -484,30 +457,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
 			</plugin>
-            <plugin>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-maven-plugin</artifactId>
-                <version>${kotlin.version}</version>
-                <executions>
-                    <execution>
-                        <id>compile</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>test-compile</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>test-compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <jvmTarget>1.8</jvmTarget>
-                </configuration>
-            </plugin>
         </plugins>
 	</build>
 	<reporting>
